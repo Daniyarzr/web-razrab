@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Админка портфолио</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/admin.css" />
+  </head>
+  <body>
+    <main class="admin-wrap">
+      <section class="login card" id="loginSection">
+        <h1>Вход в админку</h1>
+        <p>Пароль нужен для редактирования сайта.</p>
+        <form id="loginForm">
+          <input type="password" id="password" placeholder="Пароль" required />
+          <button type="submit">Войти</button>
+        </form>
+        <p id="loginMsg"></p>
+      </section>
+
+      <section class="panel card hidden" id="panelSection">
+        <div class="panel__head">
+          <h1>Управление контентом</h1>
+          <button id="logoutBtn" class="ghost" type="button">Выйти</button>
+        </div>
+
+        <form id="contentForm">
+          <h2>Главный блок</h2>
+          <label>Имя <input id="heroName" /></label>
+          <label>Заголовок <input id="heroTitle" /></label>
+          <label>Подзаголовок <textarea id="heroSubtitle"></textarea></label>
+
+          <div class="upload-line">
+            <label>Фото профиля <input type="file" id="avatarFile" accept="image/*" /></label>
+            <button type="button" id="uploadAvatarBtn">Загрузить фото</button>
+            <span id="avatarPath"></span>
+          </div>
+
+          <h2>Обо мне</h2>
+          <label>Заголовок <input id="aboutHeading" /></label>
+          <label>Текст <textarea id="aboutText"></textarea></label>
+
+          <h2>Услуги</h2>
+          <label>По одной услуге в строке <textarea id="servicesText"></textarea></label>
+
+          <h2>Контакты</h2>
+          <label>Telegram <input id="contactTelegram" /></label>
+          <label>Email <input id="contactEmail" /></label>
+          <label>Телефон <input id="contactPhone" /></label>
+
+          <button type="submit" class="save">Сохранить общие блоки</button>
+          <p id="saveMsg"></p>
+        </form>
+
+        <section class="portfolio-edit">
+          <h2>Добавить проект</h2>
+          <form id="portfolioForm">
+            <input id="portfolioTitle" placeholder="Название проекта" required />
+            <textarea id="portfolioDesc" placeholder="Описание проекта" required></textarea>
+            <input id="portfolioLink" placeholder="Ссылка (необязательно)" />
+
+            <div class="upload-line stack">
+              <label>Фото проекта (можно выбрать несколько)
+                <input type="file" id="projectFiles" accept="image/*" multiple />
+              </label>
+              <button type="button" id="uploadProjectBtn">Загрузить выбранные фото</button>
+              <span id="projectPath"></span>
+            </div>
+
+            <div id="pendingProjectImages" class="pending-images"></div>
+
+            <button type="submit">Добавить проект</button>
+          </form>
+
+          <h2 class="mt">Существующие проекты</h2>
+          <div id="portfolioItems"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/admin.js"></script>
+  </body>
+</html>
+
+
+
+

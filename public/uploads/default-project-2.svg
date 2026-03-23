@@ -1,0 +1,11 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#f3f3f3"/>
+  <rect x="220" y="90" width="760" height="620" fill="#fff" stroke="#111" stroke-width="5"/>
+  <rect x="300" y="170" width="600" height="76" fill="#111"/>
+  <circle cx="420" cy="418" r="88" fill="#d0d0d0" stroke="#111" stroke-width="4"/>
+  <rect x="550" y="340" width="290" height="24" fill="#111"/>
+  <rect x="550" y="382" width="250" height="18" fill="#d0d0d0"/>
+  <rect x="550" y="412" width="210" height="18" fill="#dcdcdc"/>
+  <rect x="330" y="560" width="540" height="28" fill="#c8c8c8"/>
+  <text x="600" y="650" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#111">Превью сервиса</text>
+</svg>
