@@ -45,14 +45,18 @@
 
       const prevBtn = document.createElement("button");
       prevBtn.type = "button";
+      prevBtn.className = "project__nav project__nav--prev";
       prevBtn.setAttribute("aria-label", "Предыдущее фото");
       prevBtn.textContent = "<";
 
       const counter = document.createElement("span");
+      counter.className = "project__counter";
+      counter.setAttribute("aria-live", "polite");
       counter.textContent = `${index + 1}/${images.length}`;
 
       const nextBtn = document.createElement("button");
       nextBtn.type = "button";
+      nextBtn.className = "project__nav project__nav--next";
       nextBtn.setAttribute("aria-label", "Следующее фото");
       nextBtn.textContent = ">";
 
